@@ -273,6 +273,54 @@ nav a:not(:last-child){
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
 }
+.quality{
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quality-right hr{
+    width: 80px;
+    height: 5px;
+    background-color: var(--clr-danger);
+    border: none;
+}
+.quality-right h2{
+    font-size: 40px;
+    color: #252B42;
+    font-weight: var(--fw-bold);
+}
+.quality-right p{
+    font-size: var(--fs-light);
+    color: #737373;
+}
+.quality-right button{
+    font-size: var(--fs-light);
+    color: #5bbb16e3;
+    border: none;
+    padding: 5px;
+    background: none;
+}
+.quality-right hr, .quality-right h2, .quality-right p{
+    margin-bottom: 25px;
+} 
+.quality-right{
+    width: 350px;
+}
+.video{
+    margin: 80px auto ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+iframe{
+    border-radius: 20px;
+}
+.courses{
+    margin: 0 auto;
+}
+
 
 
 
