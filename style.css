@@ -1,5 +1,6 @@
 :root{
     --clr-primary: #96BB7C;
+    --clr-faded-primary: #eff8ed;
     --clr-secondary-color-1: #FFAB71;
     --clr-skyblue-color:#8EC2F2;
     --clr-secondary: #F3CD03;
@@ -41,12 +42,13 @@ h1, h2, h3, h4, h5, h6, p{
     margin: none;
 }
 .width{
-    width: 1049px;
+    max-width: 1049px;
 }
 header{
     display: flex;
     justify-content: space-between;
     margin: 19px auto;
+    align-items: center;
 }
 .left-header{
     display: flex;
@@ -136,6 +138,7 @@ nav a:not(:last-child){
 
 .image{
     position: relative;
+    display: none;
 }
 
 .image img{
@@ -199,20 +202,25 @@ nav a:not(:last-child){
     width: 70px;
     height: 150px;
     border-radius: 0 0 20px 0;
-    background-color: var(--clr-light-text);
+    background-color: var(--clr-faded-primary);
     top: -20px;
     position: absolute;
+    z-index: -1;
 }
 .right-background{
     width: 620px;
     height: 700px;
     border-radius: 0 0 0 100px;
-    background-color: var(--clr-light-text);
+    background-color: var(--clr-faded-primary);
     position: absolute;
     top: -20px;
     right: 0;
     z-index: -1;
 }
+
+/* Container CSS Here */
+
+
 .parents{
     position: relative;
     
@@ -272,11 +280,15 @@ nav a:not(:last-child){
 .card h5, .card hr{
     margin-bottom: 20px;
 }
+
 .popular-bottom{
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
 }
+
+/* Training Section CSS Here */ 
+
 .quality{
     margin: 100px auto;
     display: flex;
@@ -311,6 +323,10 @@ nav a:not(:last-child){
 .quality-right{
     width: 350px;
 }
+
+<!-- /* Education CSS Starts Here */ -->
+
+
 .video{
     margin: 80px auto ;
     display: flex;
@@ -320,7 +336,14 @@ nav a:not(:last-child){
 }
 iframe{
     border-radius: 20px;
+    width: 460px;
+    height: 300px;
 }
+
+<!-- /* Packages CSS Here */ -->
+
+
+
 .courses{
     margin: 150px auto;
 }
@@ -624,11 +647,13 @@ font-weight: var(--clr-second-text);
     background-color: var(--clr-light-text);
     padding: 15px 20px;
     border-radius: 5px 0 0 5px;
+    width: 100%;
+    max-width: 500px;
 
 }
 #addressbar{
     border: none;
-    width: 500px;
+    width: 100%;
     
 }
 
@@ -686,4 +711,88 @@ footer{
     align-items: center;
     gap: 20px;
 }
+/* mobile responsive css start */
+
+@media screen and (max-width: 480px){
+    .width{
+        max-width: 400px;
+
+    }
+    .logo{
+        margin: 0 0 0 10px;
+        
+    }
+    .right-header button{
+        padding: 10px 15px;
+    }
+    .right-header a{
+        margin-right: 20px;
+    }
+    .right-source{
+        width: unset;
+    }
+    .popular-bottom{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .quality{
+        flex-direction: column-reverse;
+    }
+    .girl{
+        width: 100%;
+    }
+    .video{
+        flex-direction: column;
+    }
+    iframe{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+
+    .popular-top{
+        text-align: center;
+    }
+
+    .child{
+        flex-direction: column;  
+    }
+    .live{
+        flex-direction: column;  
+
+    }
+
+    .course{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-source img{
+        width: 100%;
+    }
+    nav{
+        display: none;
+    }
+
+    .source{
+        flex-direction: column-reverse;
+    }
+    .top-footer{
+        grid-template-columns: auto auto;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+    .touch{
+        grid-column: 1 / span 2;
+    }
+    .bottom-footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .socialmedia{
+        justify-content: center;
+    }
+
+}
+
 
